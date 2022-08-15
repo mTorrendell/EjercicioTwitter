@@ -54,9 +54,11 @@
                               <div>
                                  <div>
                                     <div class="d-flex">
-                                       <h5>
-                                          <%=follow.name%>
-                                       </h5>
+                                       <a class="text-decoration-none" href="/profile/<%= follow.username%> ">
+                                          <h5>
+                                             <%=follow.name%>
+                                          </h5>
+                                       </a>
                                        <span>
                                           <%=follow.username%> - Ago 12
                                        </span>
