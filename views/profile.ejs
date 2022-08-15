@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- font awsom -->
+  <script src="https://kit.fontawesome.com/dd78c4fffe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row d-flex justify-content-between ">
+      <%- include("partials/sidebarLeft") %>
+        <section class="col-6 containerInfo">
+          <div class="row navbarrow">
+            <div class="col-1 d-flex justify-content-center align-items-center">
+              <a href="/home"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="col-9" style="padding-bottom: 10px">
+              <h5 class="mb-0">
+                <%= user.name %>
+              </h5>
+              <h6 class="username mt-0">
+                <%=user.tweetlist.length %>
+              </h6>
+            </div>
+          </div>
+          <!--Add profile picture-->
+          <div class="border">
+            <section>
+              <div class="row imgBackProfile">
+                <%if(oneUser.backgroundpicture.includes("https")){%>
+                  <img id="imgBack" class="imageBack" src=<%=oneUser.backgroundpicture%>/>
+                  
+                  <%}else{%>
+                    <img id="imgBack" class="imageBack" src="/img/userProfiles/<%=oneUser.backgroundpicture %>" />
+                    <%}%>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <%if(oneUser.profilepicture.includes("https")){%>
+                    <img class="col-2 profileImage" src=<%=oneUser.profilepicture %> />
+                    <%}else{%>
+                      <img class="col-2 profileImage" src="/img/userProfiles/<%=oneUser.profilepicture %>" />
+                      <%}%>
+                </div>
+                <%if (userLogged.username === oneUser.username) { %>
+                  <div class="col-6 d-flex justify-content-end mt-4">
+                  <a class="" href="/update/<%=oneUser.username%>"><button type="submit"
+                      class="btn btn-light border fw-bold buttonEdit">
+                      Edit Profile
+                    </button></a>
+                </div>
+               <% }%>
+               
+              </div>
+            </section>
+            <!--Info-->
+            <section>
+              <div class="row m-2 infoProfileAndEdit">
+              </div>
+              <div class="row d-flex">
+                <div class="col-12 m-1 mb-4">
+                  <h6 class="fw-bold mb-0">
+                    <%=oneUser.name%>
+                  </h6>
+                  <h7 class="username">
+                    @<%=oneUser.username%>
+                  </h7>
+                </div>
+                <div>
+                  <h7 class="col-12">
+                    <%=oneUser.description%>
+                  </h7>
+                </div>
+                <div class="col-12 m-1">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <label>
+                    joined: 18/08/2022
+                  </label>
+                </div>
+                <div class="col-12 m-1 d-flex flex-wrap ">
+                  <a class="mr-2 d-flex flex-wrap text-decoration-none text-dark"
+                    href="/show/following/<%=oneUser.username%>">
+                    <label class="fw-bold m-1">
+                      <%=(oneUser.following).length%>
+                    </label>
+                    <p class="fw-light m-1 linksFollowers">Following</p>
+                  </a>
+
+                  <a class="mr-2 d-flex flex-wrap text-decoration-none text-dark"
+                    href="/show/followers/<%=oneUser.username%>">
+                    <label class="fw-bold m-1">
+                      <%=(oneUser.followers).length%>
+                    </label>
+                    <p class="fw-light m-1 linksFollowers">Followers</p>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section>
+              <hr class="hrProfileLine">
+              <div class=" row">
+                <div class="col-3 d-flex justify-content-center divOfBottom">
+                  <a href="/profile/<%= oneUser.username%>"><button class="bottonOPtions">Tweets</button></a>
+                </div>
+                <div class="col-3 d-flex justify-content-center divOfBottom">
+                  <a href="/construction"><button class="bottonOPtions">Tweets and
+                      Replies</button></a>
+                </div>
+                <div class="col-3 d-flex justify-content-center divOfBottom">
+                  <a href="/construction"><button class="bottonOPtions">Media</button></a>
+                </div>
+                <div class="col-3 d-flex justify-content-center divOfBottom">
+                  <a href="/construction"><button class="bottonOPtions">Likes</button></a>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="border tweet">
+            <%if (arrayTweets.length>0) { %>
+              <% for(const tweet of arrayTweets) { %>
+                <div id="tweetCard" class="col-12 d-flex">
+                  <div>
+                    <%if(oneUser.profilepicture.includes("https")){%>
+                      <img class="profileImageOthers" src=<%=oneUser.profilepicture %> />
+                      <%}else{%>
+                        <img class="profileImageOthers"
+                          src="/img/userProfiles/<%=oneUser.profilepicture %>" />
+                        <%}%>
+                  </div>
+                  <div>
+                    <div>
+                      <div class="d-flex">
+                        <h5>
+                          <%=oneUser.name%>
+                        </h5>
+                        <span>
+                          <%=oneUser.username%> - Ago 12
+                        </span>
+                      </div>
+                      <div>
+                        <p>
+                          <%=tweet.content%>
+                        </p>
+                      </div>
+                      <div>
+                        <a href="/delete/<%=tweet._id%>">
+                          <button class="btn">
+                            delete
+                          </button>
+                        </a>
+
+                      </div>
+                    </div>
+                    <div id="tweetIcons">
+                      <span><i class="fa-regular fa-comment"></i></span>
+                      <span><i class="fa-solid fa-retweet"></i></span>
+                      <a href="/like/<%=tweet._id%>"><span><i class="fa-solid fa-heart"></i>
+                          <%=tweet.likes.length%>
+                        </span></a>
+                      <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                      <span><i class="fa-solid fa-chart-simple"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <%}%>
+                  <% } %>
+          </section>
+        </section>
+        <section class="col-3">
+          <%- include("partials/sidebarRight") %>
+        </section>
+    </div>
+  </div>
+</body>
+
+</html>

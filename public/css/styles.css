@@ -1,0 +1,748 @@
+:root {
+  --bs-primary-color: rgb(29, 155, 240);
+  --bs-titles-color: #0f1419;
+  /* --bs-button-color: ; */
+}
+
+* {
+  font-family: "Archivo", sans-serif;
+}
+
+#containerFlex {
+  margin: 0;
+  min-width: 100vw;
+  padding: 0;
+}
+
+#rowFlex {
+  height: 94vh;
+  margin: 0;
+}
+
+#backgroundImgPage {
+  height: 100%;
+}
+
+#imgFlex {
+  background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.r-jwli3a {
+  color: rgb(255, 255, 255);
+}
+
+.r-yyyyoo {
+  fill: currentColor;
+}
+
+.r-bnwqim {
+  position: relative;
+}
+.r-rxcuwo {
+  height: 50%;
+}
+
+.r-m327ed {
+  max-height: 380px;
+  justify-content: center;
+}
+
+#containerRight {
+  display: flex;
+  flex-flow: column;
+  padding: 36px;
+}
+
+#twitterLog {
+  padding-bottom: 12px;
+}
+
+#HappeningNow {
+  font-size: 64px;
+  color: var(--bs-titles-color);
+  letter-spacing: -1.2px;
+  font-weight: 700;
+  margin: 48px 0 48px 0;
+  line-height: 84px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+#JoinTwitterToday {
+  color: var(--bs-titles-color);
+  margin-bottom: 32px;
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 36px;
+  font-family: "Archivo", sans-serif;
+}
+
+#authentificationBtns {
+  display: flex;
+  flex-flow: column;
+}
+
+.btnSignin {
+  max-width: 380px;
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dadce0;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.btnGoogle {
+  margin-bottom: 10px;
+}
+
+.googleIcon {
+  margin-right: 8px;
+}
+.btnSignUp {
+  font-weight: 500;
+  color: #3c4043;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.googleSignUp {
+  font-family: "Google Sans", sans-serif;
+}
+
+.appleIcon {
+  margin-right: 4px;
+}
+
+.appleSignUp {
+  margin: 0;
+}
+
+.appleSign {
+  font-weight: 700;
+  color: #000;
+}
+
+.orLine {
+  display: flex;
+  align-items: center;
+  margin: 8px 4px;
+  width: 300px;
+}
+
+.divOrLine {
+  background-color: rgb(239, 243, 244);
+  height: 1px;
+  width: 135.203px;
+  margin: 4px;
+}
+
+.or {
+  margin: 0 4px;
+}
+
+.btnSigninPhoneOrEmail {
+  max-width: 380px;
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dadce0;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  display: flex;
+  background-color: var(--bs-primary-color);
+}
+
+.btnSignUpPhoneOrEmail {
+  color: var(--bs-primary-color);
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.signingupSpan {
+  font-size: 11px;
+  margin-bottom: 20px;
+  line-height: 12px;
+  color: rgba(83, 100, 113);
+}
+
+.signingupSpan a {
+  text-decoration: none;
+}
+
+.signingupSpan a:hover {
+  color: #0d6efd;
+}
+
+.termsOfService {
+  font-weight: 400;
+}
+
+.signingupSpan .termsOfService a {
+  color: var(--bs-primary-color);
+}
+
+.alreadyAccount {
+  margin: 40px 0 20px 0;
+  color: var(--bs-titles-color);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.signInAnchor {
+  text-decoration: none;
+}
+
+.btnLog {
+  color: var(--bs-primary-color);
+  font-weight: 700;
+}
+
+.modalContent {
+  padding: 0 16px 0 16px;
+}
+
+.bodyModal {
+  padding: 0;
+  min-width: 600px;
+  height: 650px;
+  min-height: 400px;
+  border-radius: 20px;
+}
+
+.modalFlexTitle {
+  display: flex;
+  align-items: center;
+}
+
+.acrossModel {
+  min-width: 50%;
+  display: flex;
+}
+
+.twitterModalIcon {
+  color: var(--bs-primary-color);
+}
+
+.contentModal {
+  text-align: -webkit-center;
+  padding: 0 38px 48px 38px;
+}
+a {
+  text-decoration: none;
+}
+
+#singInInput {
+  border-radius: 4px;
+  border-color: rgb(207, 217, 222);
+  /* padding: 12px 8px 8px 8px; */
+  margin-top: 10px;
+  width: 300px;
+  padding: 0;
+  height: 58px;
+  padding-left: 8px;
+}
+
+.SignInTwitter {
+  margin: 15px 0 30px 0;
+  font-weight: 600;
+}
+
+#continueGoogle {
+  margin-bottom: 25px;
+}
+
+.divOrLineModal {
+  background-color: rgb(207, 217, 222);
+  height: 0.5px;
+}
+
+.nextDiv {
+  margin-top: 24px;
+  background-color: rgba(0, 0, 0, 1);
+  margin-bottom: 25px;
+}
+
+.next {
+  background-color: rgba(0, 0, 0, 1);
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.btnForgotPassword {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.haveAccount {
+  font-size: 15px;
+  color: #536471;
+}
+
+.haveAccount a {
+  text-decoration: none;
+  color: var(--bs-primary-color);
+}
+
+.gridModalPassword {
+  display: grid;
+  justify-items: left;
+}
+
+.passwordModalDiv {
+  text-align-last: left;
+}
+
+.formModal2 {
+  width: 100%;
+}
+
+.formModal2 #singInInput {
+  width: 100%;
+}
+
+#formUsernameModal {
+  color: rgb(83, 100, 113);
+  border-color: rgb(239, 243, 244);
+  background-color: rgb(239, 243, 244);
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 0;
+  height: 58px;
+  padding-left: 8px;
+  margin-bottom: 14px;
+  opacity: 0.5;
+}
+
+#btnLogin {
+  width: 100%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dadce0;
+  margin-bottom: 8px;
+  display: flex;
+  border-radius: 9999px;
+}
+
+#emailHelp a {
+  text-decoration: none;
+  color: var(--bs-primary-color);
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+.divEmpty {
+  height: 200px;
+}
+
+#btnNextPassword {
+  width: 100%;
+  min-height: 52px;
+  min-width: 52px;
+  border-radius: 9999px;
+  font-size: 17px;
+  border: none;
+}
+
+.anchorUseEmail a {
+  text-decoration: none;
+  color: var(--bs-primary-color);
+  font-size: 15px;
+  text-align: right;
+}
+
+#anchorEmailModal {
+  text-align: right;
+}
+
+#emailRegisterModal {
+  padding: 12px 0 12px 0;
+}
+
+.h2CreateAccount {
+  text-align: left;
+}
+
+.h4DateOfBirth {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.h4DateOfBirth h4 {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.selectModalBirth {
+  width: 50%;
+  display: inline;
+}
+
+.paragraphModalBirthday {
+  font-size: 14px;
+  color: #536471;
+  text-align: left;
+}
+
+#btnRegisterModal {
+  width: 100%;
+  min-height: 52px;
+  min-width: 52px;
+  border-radius: 9999px;
+  font-size: 17px;
+}
+
+.divEmptyRegister {
+  height: 60px;
+}
+
+#selectRegisterModal {
+  border-color: rgb(207, 217, 222);
+  border-radius: 4px;
+  color: rgb(83, 100, 113);
+}
+
+.labelSelect {
+  text-align: left;
+}
+
+.stepModal {
+  font-weight: bolder;
+  color: #0f1419;
+  font-size: 20px;
+  text-align: left;
+}
+
+#stepTitle {
+  margin-top: 15px;
+}
+#acrossStep {
+  min-width: 0;
+  margin-right: 20px;
+}
+
+.hrStep2 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.paragraphDiv {
+  display: flex;
+}
+
+#checkStep2 {
+  background-color: #fff;
+  border: none;
+}
+#inputCheck {
+  width: auto;
+  margin-left: 40px;
+}
+
+.divEmptyRegisterStep2 {
+  margin-top: 100px;
+}
+.paragraphDiv p {
+  color: #0f1419;
+  font-size: 15px;
+}
+
+.paragraphDiv a {
+  color: var(--bs-primary-color);
+}
+
+.contentModalStep2 {
+  padding: 0 50px 48px;
+}
+#footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px 16px;
+  font-family: "Roboto", sans-serif;
+  font: inherit;
+}
+
+.anchorFooter {
+  text-decoration: none;
+  color: #536471;
+  font-size: 13px;
+  padding-right: 16px;
+}
+
+.contentFlexModal .formModal2 #btnLogin {
+  margin-top: 0;
+}
+
+#footer .anchorFooter:hover {
+  color: #536471;
+}
+
+#footer .anchorFooter:active {
+  text-decoration: underline;
+}
+
+/* csss nico - home inicio */
+#sidebar-buttons a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(8, 7, 7);
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+}
+
+#sidebar-buttons a:hover {
+  background-color: rgb(247, 249, 249);
+}
+#tweetBtn {
+  width: 200px;
+  border-radius: 30px;
+}
+#logotw {
+  font-size: 30px;
+  margin-top: 20px;
+  color: rgb(29, 155, 240);
+}
+#searchTw {
+  background-color: rgb(247, 249, 249);
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  width: 350px;
+}
+#trending {
+  background-color: rgb(247, 249, 249);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  width: 350px;
+}
+#trending span {
+  font-size: 15px;
+}
+#WhoFollow {
+  background-color: rgb(247, 249, 249);
+  padding: 10px;
+  border-radius: 15px;
+  width: 350px;
+}
+#imgUserCard {
+  height: 50px;
+}
+.marginRight {
+  margin-right: 10px;
+}
+
+#tweetInput {
+  border: none;
+  width: 500px;
+  padding: 20px;
+}
+
+#whatsHappening {
+  width: 700px;
+  padding: 20px;
+  border: 1px solid rgb(247, 249, 249);
+}
+
+#userTwt a {
+  text-decoration: none;
+  color: #000;
+}
+
+#icons-tweet i {
+  color: #47a7fb;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+#tweetIcons a {
+  margin: 20px;
+  color: rgb(207, 202, 202);
+}
+
+#btn-twt {
+  border-radius: 30px;
+  width: 80px;
+}
+
+#likesNumber {
+  color: rgb(125, 121, 121);
+}
+
+.positionfixed {
+  position: fixed;
+}
+
+/* css nico - home fin */
+
+/* css Mer - Perfil inicio */
+
+.contenedor {
+  width: 100%;
+  height: 10px !important;
+}
+.contendor img {
+  width: 100%;
+  height: auto;
+}
+.nav {
+  background-color: rgba(211, 211, 211, 0.37) !important;
+}
+.navbarrow {
+  width: 100%;
+  margin: 0;
+}
+.imgBackProfile {
+  height: 200px;
+  margin: 0;
+  background-color: #edf2ff;
+}
+
+.imgBackProfile img {
+  height: 200px;
+  padding: 0;
+}
+
+.imageBack {
+  object-fit: cover;
+}
+
+.profileImage {
+  display: inline-block !important;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #fff;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+.profileImageOthers {
+  display: inline-block !important;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #fff;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.buttonEdit {
+  display: inline-block;
+  background-color: white !important;
+  border-radius: 9999px;
+  border-color: rgb(207, 217, 222);
+  font-size: 15px;
+  color: #0f1419;
+  padding: 6px 16px 6px 16px;
+  margin-right: 16px;
+}
+.bottonOPtions {
+  display: block;
+  all: unset;
+  width: auto;
+  padding: 15px;
+}
+.username {
+  font-size: small;
+  color: rgb(138, 133, 133);
+  margin: 2px;
+}
+.divOfBottom {
+  text-decoration: none !important;
+  padding: 0;
+  font-size: 15px;
+}
+
+.divOfBottom a {
+  color: #0f1419;
+}
+
+.divOfBottom:hover {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.bigContainer {
+  margin-left: 6% !important;
+  margin-right: 6% !important;
+}
+
+.border {
+  border: 1px lightgray;
+}
+
+.linksFollowers:hover {
+  text-decoration: underline;
+}
+
+/* csss Mer - Perfil fin */
+
+/*css nico- tweet card */
+
+#tweetCard {
+  width: auto;
+  border-bottom: 1px solid rgb(247, 249, 249);
+  border-top: 1px solid rgb(247, 249, 249);
+  padding: 20px;
+}
+#tweetIcons SPAN {
+  margin: 20px;
+}
+
+.flexContainerNavbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.spanNavbarLeft {
+  margin-left: 20px !important;
+}
+
+.hrProfileLine {
+  margin-bottom: 0;
+}
+
+#logout {
+  width: 100%;
+  background-color: var(--bs-primary-color) !important;
+  border-radius: 30px;
+  margin-top: 20px;
+  border: none;
+  color: #fff !important;
+}
+
+.btnTweetHome {
+  background-color: var(--bs-primary-color);
+}
+
+#twIcon {
+  fill: var(--bs-primary-color);
+}
+
+@media (max-width: 1200px) {
+  #HappeningNow {
+    font-size: 50px;
+  }
+} ;

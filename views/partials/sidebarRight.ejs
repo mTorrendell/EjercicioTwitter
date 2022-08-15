@@ -1,0 +1,75 @@
+<div class="col-lg-6 d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
+  <div>
+    <input id="searchTw" type="text" placeholder=" Search Twitter" />
+  </div>
+  <div id="trending">
+    <h2 class="fs-4 fw-bold">Trends for you</h2>
+    <div class="mt-4">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Muslera</p>
+      <span>1,537 Tweets</span>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Suárez</p>
+      <span>1,730 Tweets</span>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Hack Academy</p>
+      <span>1,251 Tweets</span>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Antel Arena</p>
+      <span>1,101 Tweets</span>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">#HerniPorEuropa</p>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Milanesa</p>
+    </div>
+    <div class="mt-3">
+      <span>Trending in Uruguay</span>
+      <p class="fw-bold fs-6 mb-0">Equipo2</p>
+    </div>
+  </div>
+
+  <div id="WhoFollow" class="mt-4">
+    <h3 class="fs-4 fw-bold">Who to follow</h3>
+    <%for (const user of random3Users){%>
+    <div id="userCard" class="row">
+      <div class="col-2">
+        <%if(user.profilepicture.includes("https")){%>
+        <img
+          id="imgUserCard"
+          class="rounded-circle marginRight"
+          src=<%=user.profilepicture %>
+          alt="user"
+        />
+        <%}else{%>
+          <img
+          id="imgUserCard"
+          class="rounded-circle marginRight"
+          src="/img/userProfiles/<%=user.profilepicture %>"
+          alt="user"
+        />
+        <%}%>
+      </div>
+      <div class="col-6">
+        <h4 class="mb-0 fs-6"><%=user.name%></h4>
+
+        <span class="fs-6"><%=user.username%></span>
+      </div>
+      <div class="col-4 d-flex align-items-center justify-content-end">
+        <a href="/follow/<%=user._id%>">
+        <button type="button" class="btn btn-dark justify-content-end">Follow</button>
+      </a>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</div>
